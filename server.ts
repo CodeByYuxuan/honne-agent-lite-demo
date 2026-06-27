@@ -7,7 +7,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
 // Parse JSON bodies
 app.use(express.json());
@@ -226,8 +226,13 @@ Provide the response in structured JSON matching the requested schema. Ensure al
       throw new Error("Received an empty response from the AI model.");
     }
 
-    const interpretationData = JSON.parse(jsonText.trim());
-    res.json(interpretationData);
+    try {
+      const interpretationData = JSON.parse(jsonText.trim());
+      res.json(interpretationData);
+    } catch (parseError) {
+      console.error("JSON Parsing Error of model response:", jsonText, parseError);
+      throw new Error("The AI model returned a response that could not be parsed as structured JSON. Please try again.");
+    }
   } catch (error: any) {
     console.error("Interpretation Error:", error);
     res.status(500).json({
