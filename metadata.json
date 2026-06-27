@@ -1,0 +1,6 @@
+{
+  "name": "HonneAgent",
+  "description": "An uncertainty-aware Japanese social message interpretation assistant for English-speaking international users.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
