@@ -1,54 +1,32 @@
 # HonneAgent Lite
 
-HonneAgent Lite is an uncertainty-aware Japanese message interpretation demo for the Gemini AI Hackathon at Google Japan.
+HonneAgent Lite is an uncertainty-aware Japanese social message interpreter built for the Gemini AI Hackathon @ Google Japan.
 
-The project helps English-speaking users understand ambiguous Japanese social messages by showing multiple possible readings, missing context, and low-pressure response options.
+It helps international users in Japan interpret ambiguous Japanese messages without pretending to know the speaker’s true intention.
 
 ## Core idea
 
-Generic chatbots often produce one confident answer. HonneAgent Lite keeps uncertainty visible.
-
-## MVP output
+Generic AI often gives one confident interpretation. HonneAgent keeps ambiguity visible.
 
 The app returns:
 
-- literal meaning
-- plain English gloss
-- possible interpretations
-- uncertainty note
-- missing context checklist
-- actions to avoid
-- low-pressure reply suggestions in Japanese, romaji, and English
+- Literal meaning
+- Possible interpretations
+- Uncertainty note
+- Missing context
+- Risky actions to avoid
+- Low-risk reply suggestions in Japanese and English
 
-## Product boundary
+## Safety boundary
 
-This app is not an authority on another person's intent. It only provides plausible readings based on limited context.
+HonneAgent is not a hidden-intention decoder. It does not claim to know what someone “really means.” It only shows plausible interpretations based on limited context.
 
-Users should remove names and personal details before using the tool.
-
-## MVP scope
-
-- one-page web app
-- no login
-- no database
-- no file upload
-- no message storage
+Users should remove names and private details before using the tool.
 
 ## Tech stack
 
-- Google AI Studio Build Mode
 - Gemini API
-- structured JSON output
-- React frontend
-- Node.js server runtime
-- Cloud Run deployment
-
-## Demo input
-
-```text
-最近ちょっと忙しくて、また時間が合えば。
-```
-
-## Demo closing line
-
-HonneAgent Lite does not remove uncertainty. It helps users act with better calibration when meaning is uncertain.
+- Google AI Studio
+- React
+- Node.js
+- Cloud Run

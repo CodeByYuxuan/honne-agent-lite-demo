@@ -98,7 +98,7 @@ export default function App() {
       <header id="app-header" className="max-w-7xl w-full mx-auto px-6 md:px-8 py-5 flex flex-col sm:flex-row justify-between items-start sm:items-baseline gap-2">
         <div>
           <div className="flex items-center gap-2">
-            <h1 className="text-3xl font-serif italic text-[#5a5a40] tracking-tight font-bold">HonneAgent</h1>
+            <h1 className="text-3xl font-serif italic text-[#5a5a40] tracking-tight font-bold">HonneAgent Lite</h1>
             <span className="bg-[#5a5a40]/10 text-[#5a5a40] text-[10px] px-2 py-0.5 rounded-full font-medium uppercase tracking-wider">Uncertainty-Aware</span>
           </div>
           <p className="text-xs text-[#8a8a7a] uppercase tracking-wider mt-1">Interpreting ambiguous Japanese messages or translated English expressions</p>
@@ -473,7 +473,7 @@ export default function App() {
       {/* Footer */}
       <footer className="mt-auto border-t border-[#ece9df] bg-[#faf9f4] py-6 text-center text-xs text-[#8a8a7a]">
         <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row justify-between items-center gap-3">
-          <p>© 2026 HonneAgent. Respecting boundaries, avoiding stereotypes.</p>
+          <p>© 2026 HonneAgent Lite. Respecting boundaries, avoiding stereotypes.</p>
           <p className="font-serif italic text-[#5a5a40]">Designed with Natural Tones aesthetic.</p>
         </div>
       </footer>
