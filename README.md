@@ -1,20 +1,32 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# HonneAgent Lite
 
-# Run and deploy your AI Studio app
+HonneAgent Lite is an uncertainty-aware Japanese social message interpreter built for the Gemini AI Hackathon @ Google Japan.
 
-This contains everything you need to run your app locally.
+It helps international users in Japan interpret ambiguous Japanese messages without pretending to know the speaker’s true intention.
 
-View your app in AI Studio: https://ai.studio/apps/188b28a3-9af7-4e69-8f86-2cc6a146a2f7
+## Core idea
 
-## Run Locally
+Generic AI often gives one confident interpretation. HonneAgent keeps ambiguity visible.
 
-**Prerequisites:**  Node.js
+The app returns:
 
+- Literal meaning
+- Possible interpretations
+- Uncertainty note
+- Missing context
+- Risky actions to avoid
+- Low-risk reply suggestions in Japanese and English
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Safety boundary
+
+HonneAgent is not a hidden-intention decoder. It does not claim to know what someone “really means.” It only shows plausible interpretations based on limited context.
+
+Users should remove names and private details before using the tool.
+
+## Tech stack
+
+- Gemini API
+- Google AI Studio
+- React
+- Node.js
+- Cloud Run
